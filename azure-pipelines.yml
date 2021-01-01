@@ -28,11 +28,11 @@ stages:
         Dockerfile: '**/dockerfile'
         tags: |
           $(tag)
-- stage: "Provision Infra"
+- stage: ProvisionInfra
   displayName: "Running Terraform Script"
   dependsOn: Build
   jobs:
-  - job: Provision1
+  - job: Provision
     displayName: "Provisioning Container Instance"
     pool:
       vmImage: 'ubuntu-latest'
