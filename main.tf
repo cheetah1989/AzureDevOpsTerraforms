@@ -3,6 +3,15 @@ provider "azurerm" {
   features {}
 }
 
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "tf_rgblobstorage"
+    storage_account_name = "tfstoragecheetah1989"
+    container_name       = "tfstatefile"
+    key                  = "terraform.tfstatefile"
+  }
+}
+
 resource "azurerm_resource_group" "tf_test" {
     name = "tfmainrg"
     location = "eastus2"
