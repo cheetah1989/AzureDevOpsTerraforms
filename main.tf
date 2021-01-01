@@ -12,9 +12,13 @@ terraform {
   }
 }
 
+variable "imagebuild" {
+   type = string
+   description = "Latest Build"
+}
 #TimeResourcestobecreated
 
-/*resource "azurerm_resource_group" "tf_test" {
+resource "azurerm_resource_group" "tf_test" {
     name = "tfmainrg"
     location = "eastus2"
 }
@@ -28,14 +32,14 @@ resource "azurerm_container_group" "tfcg_grp" {
   os_type = "Linux"
   container {
     name = "weatherapi"
-    image = "cheetah1989/binarythistel:weatherapidemo"
-    cpu = "1"
-    memory = "1"
-    ports {
-        port = 80
-        protocol = "TCP"
-    }
+    image = "cheetah1989/binarythistel:${var.imagebuild}"
+      cpu = "1"
+      memory = "1"
+      ports {
+         port = 80
+          protocol = "TCP"
+      }
   } 
-} */
+}
 
 #Commented testing
