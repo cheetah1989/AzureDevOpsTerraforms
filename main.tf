@@ -35,7 +35,7 @@ resource "azurerm_container_group" "tfcg_grp" {
         port = 80
         protocol = "TCP"
     }
-  } */
-}
+  } 
+} */
 
 #Commented testing
