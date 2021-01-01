@@ -25,6 +25,6 @@ stages:
         containerRegistry: 'CheetahDockerHub'
         repository: 'cheetah1989/binarythistel'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: '**/dockerfile'
         tags: |
           $(tag)
