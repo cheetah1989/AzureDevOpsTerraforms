@@ -14,7 +14,7 @@ terraform {
 
 #TimeResourcestobecreated
 
-resource "azurerm_resource_group" "tf_test" {
+/*resource "azurerm_resource_group" "tf_test" {
     name = "tfmainrg"
     location = "eastus2"
 }
@@ -35,7 +35,7 @@ resource "azurerm_container_group" "tfcg_grp" {
         port = 80
         protocol = "TCP"
     }
-  }
+  } */
 }
 
 #Commented testing
